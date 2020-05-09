@@ -12,4 +12,7 @@
 - The syntax, `s := ""`, which defines and assigns a variable can only be used within a function, and not for package-level variables.
 - `map` is equivalen to `python`'s `dict`. The key may be of any type whose values can be compared using the `==` operator. `string`s are the most common. Technically, since the datatypes are declared on start, the equivalence isn't with a Python dictionary, rather, it's equivalent to `python`'s `collections.defaultdict`. Ordering, unlike Python's is unordered.
 - `map[string]int` means a dictionary with keys of the `string` datatype and values of `int` datatype. The inbuilt command, `make` is used to actually create the dictionary. i.e., `make(map[string]int)`. Neeto!
-
+- Open a file with `os.Open`, then read the actual contents of the file with `bufio.NewScanner.Scan()`. Weird.
+- Functions and other package-level entities may be declared in any order.
+- A `map` is a reference to the data structure created by make. When a `map` is passed to a function, the function receives a copy of the reference, so any changes the called function makes to the underlying data structure will be visible through the caller’s map reference too.
+- The value of a constant (`const`) must be a number, string , or boolean
